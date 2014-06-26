@@ -16,5 +16,9 @@ build:
         code: bundle exec rake
 deploy:
   steps:
+    - heroku-deploy
+    - script:
+        name: update database
+        code: heroku run rake db:migrate --app $APP_NAME
     - 1syo/idobata-notify@0.1.2:
         token: $IDOBATA_TOKEN
