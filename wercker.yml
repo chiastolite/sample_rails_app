@@ -1,9 +1,16 @@
 box: wercker/rvm
+services:
+  - wercker/postgresql
 build:
   steps:
     - rvm-use:
         version: ruby-2.1.2
+    - rails-database-yml:
+        service: postgresql
     - bundle-install
+    - script:
+        name: Set up db
+        code: bundle exec rake db:create db:migrate RAILS_ENV=test
     - script:
         name: rake
         code: bundle exec rake
