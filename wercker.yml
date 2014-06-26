@@ -17,5 +17,5 @@ deploy:
     - heroku-deploy:
         run: rake db:migrate --app $APP_NAME
   after-steps:
-    - 1syo/idobata-notify@0.1.2:
+    - 1syo/idobata-notify:
         token: $IDOBATA_TOKEN
