@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rails_12factor'
 
 gem "rails-assets-bootstrap"
 gem "slim-rails", github: "slim-template/slim-rails"
