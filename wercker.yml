@@ -7,3 +7,7 @@ build:
     - script:
         name: rake
         code: bundle exec rake
+deploy:
+  steps:
+    - 1syo/idobata-notify@0.1.2:
+        token: $IDOBATA_TOKEN
