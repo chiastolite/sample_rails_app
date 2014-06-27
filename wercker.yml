@@ -5,13 +5,6 @@ build:
   steps:
     - rails-database-yml:
         service: postgresql
-    - bundle-install
-    - script:
-        name: Set up db
-        code: bundle exec rake db:create db:migrate RAILS_ENV=test
-    - script:
-        name: rake
-        code: bundle exec rake
 deploy:
   steps:
     - heroku-deploy:
