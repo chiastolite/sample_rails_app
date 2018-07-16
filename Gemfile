@@ -1,7 +1,7 @@
 source "https://rails-assets.org"
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.16'
 
 gem 'sqlite3', group: [:development, :test]
 gem 'pg',      group: :production
